@@ -32,14 +32,16 @@ public class Interactable : MonoBehaviour
                             isIteratioTextVisible = true;
                         }
                     }
-                    if (collider.gameObject.tag == "Object") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    if (collider.gameObject.tag == "TrashCan") // tu tag obiektu, dla ktorego wysw. bedze tekst
                     {
                         if (!isIteratioTextVisible)
                         {
-                            manager.SetIteractionText("Zjad³eœ!");
+                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIteratioTextVisible = true;
                         }
                     }
+                    //Debug.Log(collider);
+                    //Debug.Log(collider.gameObject.tag);
                 }
             }
         }
