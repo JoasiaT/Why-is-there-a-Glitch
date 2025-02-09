@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Object
+  - VendingMachine
+  - Ground
   layers:
   - Default
   - TransparentFX
