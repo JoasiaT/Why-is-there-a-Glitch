@@ -9,6 +9,9 @@ TagManager:
   - VendingMachine
   - Ground
   - TrashCan
+  - Table
+  - LoungeChair2
+  - CoffeTable
   layers:
   - Default
   - TransparentFX

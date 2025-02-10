@@ -6,7 +6,7 @@ public class Interactable : MonoBehaviour
 {
     private float maxVisibleTime = 2f;
     private float timeSinceInfoVisible = 0f;
-    private bool isIteratioTextVisible = false;
+    private bool isIterationTextVisible = false;
     public UIManager manager;
     
 
@@ -20,24 +20,40 @@ public class Interactable : MonoBehaviour
 
             foreach (Collider collider in colliderArray)
             {
-                // if ((collider is not BoxCollider) || (collider is BoxCollider && collider.gameObject.tag == ""))
-                if (collider is not BoxCollider)
-                {
+                 //if ((collider is not BoxCollider) || (collider is BoxCollider && collider.gameObject.tag == ""))
+                 if (collider is not BoxCollider)
+                 {
                     if (collider.gameObject.tag == "VendingMachine")  // "Object" zamieniæ na wartoœæ tagu przypisan¹ do konkretnego obiektu
                                                                       // dziêki temu bêdzie mo¿na ustaliæ dla konkretnych obiektów wyswietlane teskty
                     {
-                        if (!isIteratioTextVisible)
+                        if (!isIterationTextVisible)
                         {
                             manager.SetIteractionText("Napi³eœ siê!");
-                            isIteratioTextVisible = true;
+                            isIterationTextVisible = true;
                         }
                     }
                     if (collider.gameObject.tag == "TrashCan") // tu tag obiektu, dla ktorego wysw. bedze tekst
                     {
-                        if (!isIteratioTextVisible)
+                        if (!isIterationTextVisible)
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
-                            isIteratioTextVisible = true;
+                            isIterationTextVisible = true;
+                        }
+                    }
+                    if (collider.gameObject.tag == "LoungeChair2") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            isIterationTextVisible = true;
+                        }
+                    }
+                    if (collider.gameObject.tag == "CoffeTable") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            isIterationTextVisible = true;
                         }
                     }
                     //Debug.Log(collider);
@@ -48,10 +64,10 @@ public class Interactable : MonoBehaviour
 
         if (timeSinceInfoVisible >= maxVisibleTime)
         {
-            if (isIteratioTextVisible)
+            if (isIterationTextVisible)
             {
                 manager.SetIteractionText("");
-                isIteratioTextVisible = false;
+                isIterationTextVisible = false;
             }
             timeSinceInfoVisible = 0f;
         }

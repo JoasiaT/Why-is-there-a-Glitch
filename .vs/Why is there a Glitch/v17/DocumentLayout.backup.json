@@ -38,8 +38,7 @@
               "RelativeToolTip": "Assets\\Scripts\\UIManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T21:05:24.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T21:05:24.945Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MouseLook.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:28:03.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T20:28:03.377Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\Interactable.cs",
               "RelativeToolTip": "Assets\\Scripts\\Interactable.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAEAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T20:25:20.063Z",
               "EditorCaption": ""
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovment.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:27:04.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T20:27:04.909Z"
             }
           ]
         }
