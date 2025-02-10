@@ -56,8 +56,18 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
+                    if (collider.gameObject.tag == "BookOpen") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Przeczyts³eœ ksi¹¿kê");
+                            isIterationTextVisible = true;
+                        }
+                    }
+
                     //Debug.Log(collider);
                     //Debug.Log(collider.gameObject.tag);
+
                 }
             }
         }

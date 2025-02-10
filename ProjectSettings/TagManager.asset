@@ -12,6 +12,7 @@ TagManager:
   - Table
   - LoungeChair2
   - CoffeTable
+  - BookOpen
   layers:
   - Default
   - TransparentFX
