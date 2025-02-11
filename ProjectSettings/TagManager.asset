@@ -13,6 +13,9 @@ TagManager:
   - LoungeChair2
   - CoffeTable
   - BookOpen
+  - Plant2
+  - destroy
+  - Obsticle
   layers:
   - Default
   - TransparentFX

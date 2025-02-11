@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class Interactable : MonoBehaviour
     private float timeSinceInfoVisible = 0f;
     private bool isIterationTextVisible = false;
     public UIManager manager;
-    
+    public MouseLook mouseLook;
+    public PlayerMovment playerMovment;
+   // public AudioMananger audioMananger;
+
 
     private void Update()
     {
@@ -40,7 +44,7 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
-                    if (collider.gameObject.tag == "LoungeChair2") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    if (collider.gameObject.tag == "LoungeChair2")
                     {
                         if (!isIterationTextVisible)
                         {
@@ -48,7 +52,7 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
-                    if (collider.gameObject.tag == "CoffeTable") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    if (collider.gameObject.tag == "CoffeTable")
                     {
                         if (!isIterationTextVisible)
                         {
@@ -56,7 +60,15 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
-                    if (collider.gameObject.tag == "BookOpen") // tu tag obiektu, dla ktorego wysw. bedze tekst
+                    if (collider.gameObject.tag == "Plant2")
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            isIterationTextVisible = true;
+                        }
+                    }
+                    if (collider.gameObject.tag == "BookOpen")
                     {
                         if (!isIterationTextVisible)
                         {
@@ -64,11 +76,23 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
+                   // public void OnCollisionEnter(Collision collision) //Tym trzeba siê zaj¹æ, tylko jak?
+                    {
+                      //  if (collision.gameObject.tag == "Obsticle")
+                        {
+                          //  mouseLook = true;
+                          //  playerMovment = - 8.6f
 
-                    //Debug.Log(collider);
-                    //Debug.Log(collider.gameObject.tag);
+                          //  if (audioMananger != null)
+                                    {
+                                     //   audioMananger.PlaySFX(audioMananger.colillisionTake);
+                                    }
+                                   
+                           
+                            //Debug.Log(collider);
+                            //Debug.Log(collider.gameObject.tag);
 
-                }
+                        }
             }
         }
 
@@ -82,4 +106,3 @@ public class Interactable : MonoBehaviour
             timeSinceInfoVisible = 0f;
         }
     }
-}
