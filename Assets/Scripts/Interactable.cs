@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour
     public UIManager manager;
     public MouseLook mouseLook;
     public PlayerMovment playerMovment;
-   // public AudioMananger audioMananger;
+    // public AudioMananger audioMananger;
 
 
     private void Update()
@@ -24,9 +24,9 @@ public class Interactable : MonoBehaviour
 
             foreach (Collider collider in colliderArray)
             {
-                 //if ((collider is not BoxCollider) || (collider is BoxCollider && collider.gameObject.tag == ""))
-                 if (collider is not BoxCollider)
-                 {
+                //if ((collider is not BoxCollider) || (collider is BoxCollider && collider.gameObject.tag == ""))
+                if (collider is not BoxCollider)
+                {
                     if (collider.gameObject.tag == "VendingMachine")  // "Object" zamieniæ na wartoœæ tagu przypisan¹ do konkretnego obiektu
                                                                       // dziêki temu bêdzie mo¿na ustaliæ dla konkretnych obiektów wyswietlane teskty
                     {
@@ -76,26 +76,33 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
-                   // public void OnCollisionEnter(Collision collision) //Tym trzeba siê zaj¹æ, tylko jak?
+
+                    if (collider.gameObject.tag == "BomBox")
                     {
-                      //  if (collision.gameObject.tag == "Obsticle")
+                        if (!isIterationTextVisible)
                         {
-                          //  mouseLook = true;
-                          //  playerMovment = - 8.6f
-
-                          //  if (audioMananger != null)
-                                    {
-                                     //   audioMananger.PlaySFX(audioMananger.colillisionTake);
-                                    }
-                                   
-                           
-                            //Debug.Log(collider);
-                            //Debug.Log(collider.gameObject.tag);
-
+                            manager.SetIteractionText("W³¹czy³eœ radio");
+                            isIterationTextVisible = true;
                         }
+                    }
+
+
+                    if (collider.gameObject.tag == "WaterDispenser")
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Wypi³eœ wodê");
+                            isIterationTextVisible = true;
+                        }
+                    }
+
+
+                    //Debug.Log(collider);
+                    //Debug.Log(collider.gameObject.tag);
+                }
+
             }
         }
-
         if (timeSinceInfoVisible >= maxVisibleTime)
         {
             if (isIterationTextVisible)
@@ -104,5 +111,14 @@ public class Interactable : MonoBehaviour
                 isIterationTextVisible = false;
             }
             timeSinceInfoVisible = 0f;
-        }
+        }               
     }
+
+    public void OnCollisionEnter(Collision collision) //Tym trzeba siê zaj¹æ, tylko jak? Najproœciej jak to mo¿liwe!
+    {
+        //if (collision.gameObject.tag == "Obsticle")
+        //{
+        Debug.Log(collision.gameObject.tag);
+        //}
+    }
+}

@@ -48,9 +48,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseLook.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\MouseLook.cs",
               "RelativeToolTip": "Assets\\Scripts\\MouseLook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:28:03.377Z"
+              "WhenOpened": "2025-02-08T20:28:03.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,7 +61,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\Interactable.cs",
               "RelativeToolTip": "Assets\\Scripts\\Interactable.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwD4AAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T20:25:20.063Z",
               "EditorCaption": ""
@@ -73,9 +74,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovment.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\PlayerMovment.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovment.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwAgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:27:04.909Z"
+              "WhenOpened": "2025-02-08T20:27:04.909Z",
+              "EditorCaption": ""
             }
           ]
         }

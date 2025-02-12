@@ -16,6 +16,8 @@ TagManager:
   - Plant2
   - destroy
   - Obsticle
+  - BomBox
+  - WaterDispenser
   layers:
   - Default
   - TransparentFX
