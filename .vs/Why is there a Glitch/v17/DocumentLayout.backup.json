@@ -3,12 +3,26 @@
   "WorkspaceRootPath": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|c:\\repozytorium\\why is there a glitch\\why is there a glitch\\assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|solutionrelative:assets\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|c:\\repozytorium\\why is there a glitch\\why is there a glitch\\assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\AudioManangare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\CollisionDetect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\assets\\scripts\\playermovment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\assets\\scripts\\wallobsticable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wallobsticable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{665EDD7A-9402-D017-B759-9675D479D7FA}|Assembly-CSharp.csproj|C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\assets\\scripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +44,58 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AudioManangare.cs",
+              "DocumentMoniker": "C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\AudioManangare.cs",
+              "RelativeDocumentMoniker": "..\\..\\Running-Mouse\\Running-Mouse\\Assets\\Script\\AudioManangare.cs",
+              "ToolTip": "C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\AudioManangare.cs",
+              "RelativeToolTip": "..\\..\\Running-Mouse\\Running-Mouse\\Assets\\Script\\AudioManangare.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAC4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T19:40:43.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CollisionDetect.cs",
+              "DocumentMoniker": "C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\CollisionDetect.cs",
+              "RelativeDocumentMoniker": "..\\..\\Running-Mouse\\Running-Mouse\\Assets\\Script\\CollisionDetect.cs",
+              "ToolTip": "C:\\Repozytorium\\Running-Mouse\\Running-Mouse\\Assets\\Script\\CollisionDetect.cs",
+              "RelativeToolTip": "..\\..\\Running-Mouse\\Running-Mouse\\Assets\\Script\\CollisionDetect.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T19:40:20.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\AudioManager.cs",
+              "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\AudioManager.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAWwD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T19:18:45.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WallObsticable.cs",
+              "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\WallObsticable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WallObsticable.cs",
+              "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\WallObsticable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WallObsticable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T19:35:38.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
@@ -42,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MouseLook.cs",
               "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\MouseLook.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseLook.cs",
@@ -50,34 +115,32 @@
               "RelativeToolTip": "Assets\\Scripts\\MouseLook.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:28:03.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T20:28:03.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Interactable.cs",
               "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\Interactable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\Interactable.cs",
               "RelativeToolTip": "Assets\\Scripts\\Interactable.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAArwJgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-08T20:25:20.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PlayerMovment.cs",
               "DocumentMoniker": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\PlayerMovment.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovment.cs",
               "ToolTip": "C:\\Repozytorium\\Why is there a Glitch\\Why is there a Glitch\\Assets\\Scripts\\PlayerMovment.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovment.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T20:27:04.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T20:27:04.909Z"
             }
           ]
         }

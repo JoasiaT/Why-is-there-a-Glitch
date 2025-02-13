@@ -11,8 +11,12 @@ public class Interactable : MonoBehaviour
     public UIManager manager;
     public MouseLook mouseLook;
     public PlayerMovment playerMovment;
-    // public AudioMananger audioMananger;
+    public AudioManager audioMananger;
 
+    private void Awake()
+    {
+        audioMananger = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Update()
     {
@@ -76,25 +80,49 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                         }
                     }
-
-                    if (collider.gameObject.tag == "BomBox")
-                    {
-                        if (!isIterationTextVisible)
-                        {
-                            manager.SetIteractionText("W³¹czy³eœ radio");
-                            isIterationTextVisible = true;
-                        }
-                    }
-
-
                     if (collider.gameObject.tag == "WaterDispenser")
                     {
                         if (!isIterationTextVisible)
                         {
                             manager.SetIteractionText("Wypi³eœ wodê");
                             isIterationTextVisible = true;
+
                         }
                     }
+                    if (collider.gameObject.tag == "microwave")
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Odgrza³eœ pizze");
+                            isIterationTextVisible = true;
+
+                        }
+                    }
+                    if (collider.gameObject.tag == "CoffeeMachine")
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("Wypi³eœ kawê");
+                            isIterationTextVisible = true;
+
+                        }
+                    }
+                    if (collider.gameObject.tag == "BomBox")
+                    {
+                        if (!isIterationTextVisible)
+                        {
+                            manager.SetIteractionText("W³¹czy³eœ radio");
+                            isIterationTextVisible = true;
+                            //DODAÆ KOD NA ODTWARZANIE MUZYKI W RADIU
+
+                        }
+                    }
+
+                    //if (collider.gameObject.tag == "Radio")
+                    //{
+                    //    audioMananger.PlayOneShoot(audioMananger.radioMusic);
+                    //}
+
 
 
                     //Debug.Log(collider);
@@ -111,7 +139,26 @@ public class Interactable : MonoBehaviour
                 isIterationTextVisible = false;
             }
             timeSinceInfoVisible = 0f;
-        }               
+        }   
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            float interactRange = 10f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+
+            foreach (Collider collider in colliderArray)
+            {
+                if (collider.gameObject.tag == "BoomBox")
+                {
+                    if (audioMananger.boomBox != null)
+                    {
+                        audioMananger.PlayMusic();
+                    }
+                    Debug.Log("Gra muzyka!");
+                }
+                // kolejne obiekty tu!
+            }
+        }
     }
 
     public void OnCollisionEnter(Collision collision) //Tym trzeba siê zaj¹æ, tylko jak? Najproœciej jak to mo¿liwe!

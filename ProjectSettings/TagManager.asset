@@ -18,6 +18,8 @@ TagManager:
   - Obsticle
   - BomBox
   - WaterDispenser
+  - microwave
+  - CoffeeMachine
   layers:
   - Default
   - TransparentFX
