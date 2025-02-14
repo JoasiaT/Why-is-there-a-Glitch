@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -23,12 +20,11 @@ public class Interactable : MonoBehaviour
         timeSinceInfoVisible += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.E))
         {
-            float interactRange = 10f;
+            float interactRange = 5f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
 
             foreach (Collider collider in colliderArray)
             {
-                //if ((collider is not BoxCollider) || (collider is BoxCollider && collider.gameObject.tag == ""))
                 if (collider is not BoxCollider)
                 {
                     if (collider.gameObject.tag == "VendingMachine")  // "Object" zamieniæ na wartoœæ tagu przypisan¹ do konkretnego obiektu
@@ -46,6 +42,7 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
+                            playerMovment.points++;
                         }
                     }
                     if (collider.gameObject.tag == "LoungeChair2")
@@ -54,6 +51,7 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
+                            playerMovment.points++;
                         }
                     }
                     if (collider.gameObject.tag == "CoffeTable")
@@ -62,6 +60,7 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
+                            playerMovment.points++;
                         }
                     }
                     if (collider.gameObject.tag == "Plant2")
@@ -70,6 +69,7 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
+                            playerMovment.points++;
                         }
                     }
                     if (collider.gameObject.tag == "BookOpen")
@@ -107,23 +107,18 @@ public class Interactable : MonoBehaviour
 
                         }
                     }
-                    if (collider.gameObject.tag == "BomBox")
+                    if (collider.gameObject.tag == "BoomBox")
                     {
                         if (!isIterationTextVisible)
                         {
                             manager.SetIteractionText("W³¹czy³eœ radio");
                             isIterationTextVisible = true;
-                            //DODAÆ KOD NA ODTWARZANIE MUZYKI W RADIU
-
+                            if (audioMananger.boomBox != null)
+                            {
+                                audioMananger.PlayMusic();
+                            }
                         }
                     }
-
-                    //if (collider.gameObject.tag == "Radio")
-                    //{
-                    //    audioMananger.PlayOneShoot(audioMananger.radioMusic);
-                    //}
-
-
 
                     //Debug.Log(collider);
                     //Debug.Log(collider.gameObject.tag);
@@ -140,32 +135,6 @@ public class Interactable : MonoBehaviour
             }
             timeSinceInfoVisible = 0f;
         }   
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            float interactRange = 10f;
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-
-            foreach (Collider collider in colliderArray)
-            {
-                if (collider.gameObject.tag == "BoomBox")
-                {
-                    if (audioMananger.boomBox != null)
-                    {
-                        audioMananger.PlayMusic();
-                    }
-                    Debug.Log("Gra muzyka!");
-                }
-                // kolejne obiekty tu!
-            }
-        }
     }
 
-    public void OnCollisionEnter(Collision collision) //Tym trzeba siê zaj¹æ, tylko jak? Najproœciej jak to mo¿liwe!
-    {
-        //if (collision.gameObject.tag == "Obsticle")
-        //{
-        Debug.Log(collision.gameObject.tag);
-        //}
-    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -7,7 +5,6 @@ public class UIManager : MonoBehaviour
 {
     public PlayerMovment movment;
     public TMP_Text playerPointsText;
-
     public TMP_Text interactionText;
 
     // Update is called once per frame

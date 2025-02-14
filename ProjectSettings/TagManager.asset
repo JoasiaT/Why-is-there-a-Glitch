@@ -16,10 +16,11 @@ TagManager:
   - Plant2
   - destroy
   - Obsticle
-  - BomBox
   - WaterDispenser
   - microwave
   - CoffeeMachine
+  - BoomBox
+  - Audio
   layers:
   - Default
   - TransparentFX
