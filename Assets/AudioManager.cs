@@ -22,22 +22,22 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //if (PlayerPrefs.HasKey("musicVolume"))
-        //{
-        //    LoadMusicVolume();
-        //}
-        //else
-        //{
-        //    SetMusicVolume();
-        //}
-        //if (PlayerPrefs.HasKey("musicVolume"))
-        //{
-        //    LoadSFXVolume();
-        //}
-        //else
-        //{
-        //    SetSFXVolume();
-        //}
+        if (PlayerPrefs.HasKey("musicVolume"))
+        {
+            LoadMusicVolume();
+        }
+        else
+        {
+            SetMusicVolume();
+        }
+        if (PlayerPrefs.HasKey("sfxVolume"))
+        {
+            LoadSFXVolume();
+        }
+        else
+        {
+            SetSFXVolume();
+        }
         audioSource.clip = boomBox;
         //audioSource.Play();
     }
@@ -60,28 +60,26 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVolume()
     {
-       // float volume = musicSlider.value;
-       // audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
-       // PlayerPrefs.SetFloat("musicVolume", volume);
+        float volume = PlayerPrefs.GetFloat("musicVolume");
+        audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("musicVolume", volume);
     }
 
-   // public void LoadMusicVolume()
-   // {
-      //  musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
-      //  SetMusicVolume();
-   // }
+    public void LoadMusicVolume()
+    {
+        SetMusicVolume();
+    }
 
-   // public void SetSFXVolume()
-  //  {
-     //   float volume = sfxSlider.value;
-      //  audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
-      //  PlayerPrefs.SetFloat("sfxVolume", volume);
-   // }
+    public void SetSFXVolume()
+    {
+        float volume = PlayerPrefs.GetFloat("sfxVolume");
+        audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
+    }
 
-   // public void LoadSFXVolume()
-   // {
-     //   sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
-      //  SetMusicVolume();
-    //}
+    public void LoadSFXVolume()
+    {
+        SetMusicVolume();
+    }
 
 }

@@ -9,6 +9,10 @@ public class Interactable : MonoBehaviour
     public MouseLook mouseLook;
     public PlayerMovment playerMovment;
     public AudioManager audioMananger;
+    private bool TrashCanFound = false;
+    private bool Plant2Found = false;
+    private bool LoungeChair2Found = false;
+    private bool CoffeTableFound = false;
 
     private void Awake()
     {
@@ -34,42 +38,48 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Napi³eœ siê!");
                             isIterationTextVisible = true;
+                            
+
                         }
                     }
                     if (collider.gameObject.tag == "TrashCan") // tu tag obiektu, dla ktorego wysw. bedze tekst
                     {
-                        if (!isIterationTextVisible)
+                        if (!isIterationTextVisible && !TrashCanFound)
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
+                            TrashCanFound = true;
                         }
                     }
                     if (collider.gameObject.tag == "LoungeChair2")
                     {
-                        if (!isIterationTextVisible)
+                        if (!isIterationTextVisible && !LoungeChair2Found)
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
+                            LoungeChair2Found = true;
                         }
                     }
                     if (collider.gameObject.tag == "CoffeTable")
                     {
-                        if (!isIterationTextVisible)
+                        if (!isIterationTextVisible && !CoffeTableFound)
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
+                            CoffeTableFound = true;
                         }
                     }
                     if (collider.gameObject.tag == "Plant2")
                     {
-                        if (!isIterationTextVisible)
+                        if (!isIterationTextVisible && !Plant2Found)
                         {
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
+                            Plant2Found = true;
                         }
                     }
                     if (collider.gameObject.tag == "BookOpen")
