@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    private float maxVisibleTime = 2f;
+    private float maxVisibleTime = 3f;
     private float timeSinceInfoVisible = 0f;
     private bool isIterationTextVisible = false;
     public UIManager manager;
@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour
     private bool Plant2Found = false;
     private bool LoungeChair2Found = false;
     private bool CoffeTableFound = false;
+    private bool playerTextVisible = false;
+    private float maxDialogTextVisible = 6f;
+    private float timeSinceDialogVisible = 0f;
 
     private void Awake()
     {
@@ -22,6 +25,7 @@ public class Interactable : MonoBehaviour
     private void Update()
     {
         timeSinceInfoVisible += Time.deltaTime;
+        timeSinceDialogVisible += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.E))
         {
             float interactRange = 5f;
@@ -38,8 +42,7 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetIteractionText("Napi³eœ siê!");
                             isIterationTextVisible = true;
-                            
-
+                            timeSinceInfoVisible = 0f; // dodaæ dla wszystkich znajdowanych obiektów to zerowanie!
                         }
                     }
                     if (collider.gameObject.tag == "TrashCan") // tu tag obiektu, dla ktorego wysw. bedze tekst
@@ -129,11 +132,16 @@ public class Interactable : MonoBehaviour
                             }
                         }
                     }
-
-                    //Debug.Log(collider);
-                    //Debug.Log(collider.gameObject.tag);
+                    if (collider.gameObject.tag == "Plant2")
+                    {
+                        if (!playerTextVisible)
+                        {
+                            manager.SetDialogueText("Moje super sekretne przemyœlenia....");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                        }
+                    }
                 }
-
             }
         }
         if (timeSinceInfoVisible >= maxVisibleTime)
@@ -144,7 +152,16 @@ public class Interactable : MonoBehaviour
                 isIterationTextVisible = false;
             }
             timeSinceInfoVisible = 0f;
-        }   
+        }
+        if (timeSinceDialogVisible >= maxDialogTextVisible)
+        {
+            if (playerTextVisible)
+            {
+                manager.SetDialogueText("");
+                playerTextVisible = false;
+            }
+            timeSinceDialogVisible = 0f;
+        }
     }
 
 }
