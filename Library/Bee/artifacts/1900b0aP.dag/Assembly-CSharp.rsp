@@ -309,6 +309,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.51f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/AudioManager.cs"
 "Assets/MainMenu.cs"
+"Assets/OptionsController.cs"
 "Assets/Scripts/Interactable.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerMovment.cs"

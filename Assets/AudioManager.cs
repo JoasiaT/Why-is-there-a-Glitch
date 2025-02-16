@@ -14,12 +14,6 @@ public class AudioManager : MonoBehaviour
     [Header("................Audio Clip ....................")]
     public AudioClip boomBox;
 
-    //[Header("................Audio Sliders .................")]
-    //[SerializeField] public Slider musicSlider;
-    //[SerializeField] public Slider sfxSlider;
-
-    //AudioManangare audioManangare;
-
     private void Start()
     {
         if (PlayerPrefs.HasKey("musicVolume"))
