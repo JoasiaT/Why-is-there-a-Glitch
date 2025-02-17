@@ -21,6 +21,7 @@ TagManager:
   - CoffeeMachine
   - BoomBox
   - Audio
+  - EsterEnd
   layers:
   - Default
   - TransparentFX

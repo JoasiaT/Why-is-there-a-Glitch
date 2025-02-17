@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text playerPointsText;
     public TMP_Text interactionText;
     public TMP_Text dialogueText;
+    public GameObject dialoguePanel;
 
     // Update is called once per frame
     void Update()
@@ -23,8 +24,12 @@ public class UIManager : MonoBehaviour
     public void SetDialogueText(string dialogue)
     {
         dialogueText.text = dialogue;
-
-    }
-   
-   
+        if (dialogue != null && dialogue.Length > 0)
+        {
+            dialoguePanel.SetActive(true);
+        } else
+        {
+            dialoguePanel.SetActive(false);
+        }
+    }   
 }
