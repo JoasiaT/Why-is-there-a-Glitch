@@ -46,6 +46,9 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !VendingMachineFound)
                         {
+                            manager.SetDialogueText("Musi, tu byæ ktoœ, kto to wyjaœni.To bo nie mo¿e byæ prawdziwa gra.");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Napi³eœ siê!");
                             isIterationTextVisible = true;
                             timeSinceInfoVisible = 0f; // dodaæ dla wszystkich znajdowanych obiektów to zerowanie!
@@ -65,6 +68,9 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !TrashCanFound)
                         {
+                            manager.SetDialogueText("Serio? Kto to wymyœli³");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
@@ -75,6 +81,9 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !LoungeChair2Found)
                         {
+                            manager.SetDialogueText("Jeszcze jedna. Chwila, jak to wygl¹da?");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
@@ -85,6 +94,9 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !CoffeTableFound)
                         {
+                            manager.SetDialogueText("Wiem, gdzie jestem ...tylko nie panikuj, nie panikuj");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
@@ -95,7 +107,7 @@ public class Interactable : MonoBehaviour
                     {
                         if (!playerTextVisible && !Plant2Found)
                         {
-                            manager.SetDialogueText("Co? ZnajdŸka? To ... gra?");
+                            manager.SetDialogueText("Co? ZnajdŸka? To ...to gra?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Znalaz³eœ znajdŸkê");
@@ -120,7 +132,7 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !WaterDispenserFound) //Wci¹¿ tu nie dzia³a, mimo poprawki
                         {
-                            manager.SetDialogueText("Wiem, ¿e wypi³am wodê");
+                            manager.SetDialogueText("Tak, to wiem.Tylko nie widzê rêki z wod¹");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Wypi³eœ wodê");
@@ -132,6 +144,9 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !microwaveFound)
                         {
+                            manager.SetDialogueText("Mmm, ale pachnie ta Hawajsk");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Odgrza³eœ pizze");
                             isIterationTextVisible = true;
                             microwaveFound = true;
