@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     public MouseLook mouseLook;
     public PlayerMovment playerMovment;
     public AudioManager audioMananger;
+    public EndGameScreen endGameScreen;
     private bool TrashCanFound = false;
     private bool Plant2Found = false;
     private bool LoungeChair2Found = false;
@@ -22,6 +23,7 @@ public class Interactable : MonoBehaviour
     private bool BoomBoxFound = false;
     private float maxDialogTextVisible = 4f;
     private float timeSinceDialogVisible = 0f;
+    private bool endGame = false;
 
     private void Awake()
     {
@@ -185,14 +187,9 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("NIE POWINNO CIÊ TU BYÆ, JULIO!"); // Tu daæ tekst na kolizjê ze œcian¹
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-
+                            endGame = true;
                         }
                     }
-
-
-
-
-
 
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
@@ -213,6 +210,10 @@ public class Interactable : MonoBehaviour
             {
                 manager.SetDialogueText("");
                 playerTextVisible = false;
+                if (endGame)
+                {
+                    endGameScreen.showEndGameScreen();
+                }
             }
             timeSinceDialogVisible = 0f;
         }
