@@ -3,8 +3,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class EndGameScreen : MonoBehaviour
 {
-    public TMP_Text playerPointsText;
+    //public TMP_Text playerPointsText;
     // public AudioManager audioMananger;
+    public GameObject player;
 
     private void Awake()
     {
@@ -15,16 +16,29 @@ public class EndGameScreen : MonoBehaviour
     {
         //  if (audioManager != null)
         //{
-            //   audioMananger.PlayMusic();
+        //   audioMananger.PlayMusic();
         //}
-       Time.timeScale = 0;
-       gameObject.SetActive(true);
+
+        Time.timeScale = 0;
+        gameObject.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        player.GetComponent<CharacterController>().enabled = false;
     }
 
     public void PlayGameDEMO()
     {
         Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        player.GetComponent<CharacterController>().enabled = true;
         SceneManager.LoadScene("GameDEMO");
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()

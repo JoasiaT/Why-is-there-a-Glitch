@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -190,7 +191,31 @@ public class Interactable : MonoBehaviour
                             endGame = true;
                         }
                     }
+                    if (collider.gameObject.tag == "Piano")
+                    {
+                        if (!playerTextVisible)
+                        {
+                            manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz i piêkny instrument");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("Zagra³eœ na pianinie");
+                            isIterationTextVisible = true;
+                            CoffeeMachineFound = true;
+                        }
+                    }
 
+                    if (collider.gameObject.tag == "Camera")
+                    {
+                        if (!playerTextVisible)
+                        {
+                            manager.SetDialogueText("A, gdzie to zdjêcie?");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("Zrobi³eœ zdjêcie");
+                            isIterationTextVisible = true;
+                            CoffeeMachineFound = true;
+                        }
+                    }
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             }
@@ -213,6 +238,7 @@ public class Interactable : MonoBehaviour
                 if (endGame)
                 {
                     endGameScreen.showEndGameScreen();
+                    //SceneManager.LoadScene("EndGameScreen");
                 }
             }
             timeSinceDialogVisible = 0f;

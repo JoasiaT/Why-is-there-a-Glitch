@@ -22,6 +22,8 @@ TagManager:
   - BoomBox
   - Audio
   - EsterEnd
+  - Piano
+  - Camera
   layers:
   - Default
   - TransparentFX

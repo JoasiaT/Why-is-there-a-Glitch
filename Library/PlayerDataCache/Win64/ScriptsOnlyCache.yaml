@@ -2,9 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AudioManager
+    - EndGameScreen
     - Interactable
     - MainMenu
     - MouseLook
+    - OptionsController
     - PlayerMovment
     - UIManager
     Unity.Rider.Editor.dll:
@@ -90,7 +92,77 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionsController
+    methodName: StopMusic
+  - assembly: Assembly-CSharp
+    fullTypeName: EndGameScreen
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: EndGameScreen
+    methodName: PlayGameDEMO
+  - assembly: Assembly-CSharp
+    fullTypeName: EndGameScreen
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: EndGameScreen
+    methodName: PlayGameDEMO
   sceneClasses:
+    Assets/Scenes/EndGameScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
+      Script: {instanceID: 2594}
+    - Class: 114
+      Script: {instanceID: 2800}
+    - Class: 114
+      Script: {instanceID: 3098}
+    - Class: 114
+      Script: {instanceID: 5010}
+    - Class: 114
+      Script: {instanceID: 5560}
+    - Class: 114
+      Script: {instanceID: 5716}
+    - Class: 114
+      Script: {instanceID: 5940}
+    - Class: 114
+      Script: {instanceID: 6036}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/GameDEMO.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -129,6 +201,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
       Script: {instanceID: 1714}
     - Class: 114
       Script: {instanceID: 2594}
@@ -137,19 +211,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 5008}
+      Script: {instanceID: 3098}
     - Class: 114
-      Script: {instanceID: 5558}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 5560}
     - Class: 114
-      Script: {instanceID: 6032}
+      Script: {instanceID: 5716}
     - Class: 114
-      Script: {instanceID: 7410}
+      Script: {instanceID: 5940}
     - Class: 114
-      Script: {instanceID: 7638}
+      Script: {instanceID: 6036}
     - Class: 114
-      Script: {instanceID: 7744}
+      Script: {instanceID: 7416}
+    - Class: 114
+      Script: {instanceID: 7644}
+    - Class: 114
+      Script: {instanceID: 7750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,6 +241,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -193,6 +273,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -214,17 +298,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4316}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 4752}
     - Class: 114
-      Script: {instanceID: 5008}
+      Script: {instanceID: 4940}
     - Class: 114
-      Script: {instanceID: 5558}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5714}
+      Script: {instanceID: 5560}
     - Class: 114
-      Script: {instanceID: 6032}
+      Script: {instanceID: 5716}
     - Class: 114
-      Script: {instanceID: 94014}
+      Script: {instanceID: 6036}
+    - Class: 114
+      Script: {instanceID: 6316}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,6 +326,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -694,6 +786,12 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 8fa13e2540925bfffafa1c42ad80362f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OptionsController
+  - hash:
+      serializedVersion: 2
       Hash: db9b308769d19e1f9e161df0392c23ca
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -832,6 +930,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bc5b8ef5517861de6e65f5c4101850aa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EndGameScreen
+  - hash:
+      serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -872,6 +976,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: fe4c75203a9743390fe41454f7d841d0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -1060,7 +1170,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: ce43ca3bfcb27fa451bfe8ebf231f376
+      Hash: a8f05e10ca11842274c3c3bca06a058d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Interactable
@@ -1084,7 +1194,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 18050c02345a74838c859ba5f664a488
+      Hash: be0712a403e6a7fbc7dc159dd6b5ebb6
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UIManager
@@ -1100,15 +1210,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: fe4c75203a9743390fe41454f7d841d0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameDEMO.unity
+  - Assets/Scenes/EndGameScreen.unity
   playerPath: C:/Repozytorium/Why is there a Glitch/Why is there a Glitch/obj/Why
     is there a Glitch.exe
