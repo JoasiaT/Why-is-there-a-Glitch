@@ -22,6 +22,10 @@ public class Interactable : MonoBehaviour
     private bool microwaveFound = false;
     private bool CoffeeMachineFound = false;
     private bool BoomBoxFound = false;
+    private bool PianoFound = false;
+    private bool CameraFound = false;
+    private bool PilloFound = false;
+    private bool LaundryBasket = false;
     private float maxDialogTextVisible = 4f;
     private float timeSinceDialogVisible = 0f;
     private bool endGame = false;
@@ -193,29 +197,53 @@ public class Interactable : MonoBehaviour
                     }
                     if (collider.gameObject.tag == "Piano")
                     {
-                        if (!playerTextVisible)
+                        if (!playerTextVisible && !PianoFound)
                         {
                             manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz i piêkny instrument");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Zagra³eœ na pianinie");
                             isIterationTextVisible = true;
-                            CoffeeMachineFound = true;
+                            PianoFound = true;
                         }
                     }
 
                     if (collider.gameObject.tag == "Camera")
                     {
-                        if (!playerTextVisible)
+                        if (!playerTextVisible && !CameraFound)
                         {
                             manager.SetDialogueText("A, gdzie to zdjêcie?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Zrobi³eœ zdjêcie");
                             isIterationTextVisible = true;
-                            CoffeeMachineFound = true;
+                            CameraFound = true;
                         }
                     }
+                    if (collider.gameObject.tag == "Pillow")
+                    {
+                        if (!playerTextVisible && !PilloFound)
+                        {
+                            manager.SetDialogueText("O jak mi³o i jak miêkko");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("Pufa");
+                            isIterationTextVisible = true;
+                            PilloFound = true;
+                        }
+                    }
+                   // {
+                      //  if (!playerTextVisible && !LaundryBasketFound)
+                       // {
+                          //  manager.SetDialogueText("O jak mi³o i jak miêkko");
+                          //  playerTextVisible = true;
+                          //  timeSinceDialogVisible = 0f;
+                           // manager.SetIteractionText("Pufa");
+                           // isIterationTextVisible = true;
+                           // LaundryBasketFound = true;
+                       // }
+                    //}
+
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             }

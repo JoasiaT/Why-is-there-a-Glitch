@@ -24,6 +24,8 @@ TagManager:
   - EsterEnd
   - Piano
   - Camera
+  - Pillow
+  - LaundryBasket
   layers:
   - Default
   - TransparentFX
