@@ -26,6 +26,8 @@ TagManager:
   - Camera
   - Pillow
   - LaundryBasket
+  - Mug
+  - WeatFloor
   layers:
   - Default
   - TransparentFX

@@ -25,11 +25,13 @@ public class Interactable : MonoBehaviour
     private bool PianoFound = false;
     private bool CameraFound = false;
     private bool PilloFound = false;
-    private bool LaundryBasket = false;
+    private bool LaundryBasketFound = false;
+    private bool MugFound = false;
+    private bool WeatFloorFound = false;
     private float maxDialogTextVisible = 4f;
     private float timeSinceDialogVisible = 0f;
     private bool endGame = false;
-
+    
     private void Awake()
     {
         audioMananger = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -39,6 +41,7 @@ public class Interactable : MonoBehaviour
     {
         timeSinceInfoVisible += Time.deltaTime;
         timeSinceDialogVisible += Time.deltaTime;
+        bool zmienna = true;
         if (Input.GetKeyDown(KeyCode.E))
         {
             float interactRange = 5f;
@@ -232,18 +235,44 @@ public class Interactable : MonoBehaviour
                             PilloFound = true;
                         }
                     }
-                   // {
-                      //  if (!playerTextVisible && !LaundryBasketFound)
-                       // {
-                          //  manager.SetDialogueText("O jak mi³o i jak miêkko");
-                          //  playerTextVisible = true;
-                          //  timeSinceDialogVisible = 0f;
-                           // manager.SetIteractionText("Pufa");
-                           // isIterationTextVisible = true;
-                           // LaundryBasketFound = true;
-                       // }
-                    //}
+                    if (collider.gameObject.tag == "LaundryBasket")
+                    {
+                        if (!playerTextVisible && !LaundryBasketFound)
+                        {
+                            manager.SetDialogueText("Co?");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("!au$jd@w#ed%hg^*$yjd8tsSTANLY");
+                            isIterationTextVisible = true;
+                            LaundryBasketFound = true;
+                        }
+                    }
+                    if (collider.gameObject.tag == "Mug")
+                    {
+                        if (!playerTextVisible && !MugFound)
+                        {
+                            manager.SetDialogueText("Mumyjê, co mi szkodzi");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("Brudne naczynia");
+                            isIterationTextVisible = true;
+                            MugFound = true;
+                        }
+                       
+                    }
+                    if (collider.gameObject.tag == "WeatFloor")
+                    {
+                        if (!playerTextVisible && !WeatFloorFound)
+                        {
+                            manager.SetDialogueText("Co? Jak? Pod³oga jest sucha");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText(" 'Morak Pod³oga' ");
+                            isIterationTextVisible = true;
+                            WeatFloorFound = true;
+                        }
 
+                    }
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             }
