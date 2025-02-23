@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\WallObsticable.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovment.cs" />
+    <Compile Include="Assets\WrongPlace.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />

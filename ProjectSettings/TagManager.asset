@@ -28,6 +28,7 @@ TagManager:
   - LaundryBasket
   - Mug
   - WeatFloor
+  - News
   layers:
   - Default
   - TransparentFX

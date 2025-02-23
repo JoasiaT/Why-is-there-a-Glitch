@@ -28,6 +28,7 @@ public class Interactable : MonoBehaviour
     private bool LaundryBasketFound = false;
     private bool MugFound = false;
     private bool WeatFloorFound = false;
+    private bool NewsFound = false;
     private float maxDialogTextVisible = 4f;
     private float timeSinceDialogVisible = 0f;
     private bool endGame = false;
@@ -41,7 +42,6 @@ public class Interactable : MonoBehaviour
     {
         timeSinceInfoVisible += Time.deltaTime;
         timeSinceDialogVisible += Time.deltaTime;
-        bool zmienna = true;
         if (Input.GetKeyDown(KeyCode.E))
         {
             float interactRange = 5f;
@@ -273,6 +273,20 @@ public class Interactable : MonoBehaviour
                         }
 
                     }
+                    if (collider.gameObject.tag == "News")
+                    {
+                        if (!playerTextVisible && !NewsFound)
+                        {
+                            manager.SetDialogueText("...");
+                            playerTextVisible = true;
+                            timeSinceDialogVisible = 0f;
+                            manager.SetIteractionText("Nie ma tu znajdziek");
+                            isIterationTextVisible = true;
+                            NewsFound = true;
+                        }
+
+                    }
+
                     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             }
