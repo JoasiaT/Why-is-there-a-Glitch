@@ -29,6 +29,8 @@ TagManager:
   - Mug
   - WeatFloor
   - News
+  - DoorKey
+  - SecretDoor
   layers:
   - Default
   - TransparentFX

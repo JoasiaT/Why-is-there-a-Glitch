@@ -251,7 +251,7 @@ public class Interactable : MonoBehaviour
                     {
                         if (!playerTextVisible && !MugFound)
                         {
-                            manager.SetDialogueText("Mumyjê, co mi szkodzi");
+                            manager.SetDialogueText("Umyjê, co mi szkodzi");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Brudne naczynia");

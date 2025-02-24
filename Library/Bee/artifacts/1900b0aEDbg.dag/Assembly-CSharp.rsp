@@ -361,7 +361,7 @@
 "Assets/Scripts/PlayerMovment.cs"
 "Assets/Scripts/UIManager.cs"
 "Assets/Scripts/WallObsticable.cs"
-"Assets/WrongPlace.cs"
+"Assets/Scripts/WrongPlace.cs"
 -langversion:9.0
 /deterministic
 /optimize-

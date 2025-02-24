@@ -12,7 +12,7 @@ public class OptionsController : MonoBehaviour
     //[SerializeField] public AudioSource SFXSource;
 
     [Header("................Audio Clip ....................")]
-    public AudioClip boomBox;
+    public AudioClip mainMenuMusic;
 
     [Header("................Audio Sliders .................")]
     [SerializeField] Slider musicSlider;
@@ -36,7 +36,7 @@ public class OptionsController : MonoBehaviour
         {
             SetSFXVolume();
         }
-        audioSource.clip = boomBox;
+        audioSource.clip = mainMenuMusic;
         PlayMusic();
     }
 

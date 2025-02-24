@@ -6,13 +6,18 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    //public void BackgroundMusic;
+
     [Header("................Audio Sorce ...................")]
     [SerializeField] public AudioMixer audioMixer;
     [SerializeField] public AudioSource audioSource;
     //[SerializeField] public AudioSource SFXSource;
+    
 
     [Header("................Audio Clip ....................")]
     public AudioClip boomBox;
+    public AudioClip Piano;
+    //public AudioClip backgroundMusic;
 
     private void Start()
     {
