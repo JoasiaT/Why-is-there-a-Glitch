@@ -9,7 +9,7 @@ public class OptionsController : MonoBehaviour
     [Header("................Audio Sorce ...................")]
     [SerializeField] public AudioMixer audioMixer;
     [SerializeField] public AudioSource audioSource;
-    //[SerializeField] public AudioSource SFXSource;
+    [SerializeField] public AudioSource SFXSource;
 
     [Header("................Audio Clip ....................")]
     public AudioClip mainMenuMusic;

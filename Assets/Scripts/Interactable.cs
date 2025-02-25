@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,7 +33,7 @@ public class Interactable : MonoBehaviour
     private float maxDialogTextVisible = 4f;
     private float timeSinceDialogVisible = 0f;
     private bool endGame = false;
-    
+
     private void Awake()
     {
         audioMananger = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -56,20 +57,21 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !VendingMachineFound)
                         {
-                            manager.SetDialogueText("Musi, tu byæ ktoœ, kto to wyjaœni.To bo nie mo¿e byæ prawdziwa gra.");
+                            manager.SetDialogueText("Musi, tu byæ ktoœ, kto to wyjaœni. To bo nie mo¿e byæ prawdziwa gra.");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Napi³eœ siê!");
+                            audioMananger.PlaySFX(audioMananger.drinkWater);
+                            manager.SetIteractionText("Napi³aœ siê!"); //JEST DZWIEK
                             isIterationTextVisible = true;
                             timeSinceInfoVisible = 0f; // dodaæ dla wszystkich znajdowanych obiektów to zerowanie!
                             VendingMachineFound = true; //nowa zmienna!
 
 
-                                                                    //DO WBICIA DO G£OWY
+                            //DO WBICIA DO G£OWY
 
-                                             //DODAÆ DO INNYCH OBIEKTÓW TAK JAK TU. Czyli 1 - na górê i daæ Private Bool,
-                                            //2 do tego fragmentu kodu 'if (!isIterationTextVisible' dodaæ -> && oraz now¹ nazwê <dopisaæ Found>
-                                           //3 na samym dole daæ t¹ now¹ nazwê ze znakiem '=' i dopiskiem 'true'
+                            //DODAÆ DO INNYCH OBIEKTÓW TAK JAK TU. Czyli 1 - na górê i daæ Private Bool,
+                            //2 do tego fragmentu kodu 'if (!isIterationTextVisible' dodaæ -> && oraz now¹ nazwê <dopisaæ Found>
+                            //3 na samym dole daæ t¹ now¹ nazwê ze znakiem '=' i dopiskiem 'true'
 
 
                         }
@@ -81,7 +83,7 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Serio? Kto to wymyœli³");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            manager.SetIteractionText("Znalaz³aœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
                             TrashCanFound = true;
@@ -94,7 +96,7 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Jeszcze jedna. Chwila, jak to wygl¹da?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            manager.SetIteractionText("Znalaz³aœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
                             LoungeChair2Found = true;
@@ -107,7 +109,7 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Wiem, gdzie jestem ...tylko nie panikuj, nie panikuj");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            manager.SetIteractionText("Znalaz³aœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
                             CoffeTableFound = true;
@@ -120,32 +122,36 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Co? ZnajdŸka? To ...to gra?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Znalaz³eœ znajdŸkê");
+                            manager.SetIteractionText("Znalaz³aœ znajdŸkê");
                             isIterationTextVisible = true;
                             playerMovment.points++;
-                            Plant2Found = true; 
+                            Plant2Found = true;
                         }
                     }
-                    if (collider.gameObject.tag == "BookOpen")
+                    if (collider.gameObject.tag == "BookOpen") // JEST DZWIEK
                     {
                         if (!playerTextVisible && !BookOpenFound)
                         {
-                            manager.SetDialogueText("'Przeczyts³eœ ksi¹¿kê?' Jak?! Nie ruszy³am tego!");
+
+                            manager.SetDialogueText("'Przeczyts³aœ ksi¹¿kê?' Jak?! Nie ruszy³am tego!");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Przeczyts³eœ ksi¹¿kê");
+                            audioMananger.PlaySFX(audioMananger.paper);
+                            manager.SetIteractionText("Przeczytaœ ksi¹¿kê");
                             isIterationTextVisible = true;
                             BookOpenFound = true;
                         }
                     }
+
                     if (collider.gameObject.tag == "WaterDispenser")
                     {
-                        if (!isIterationTextVisible && !WaterDispenserFound) //Wci¹¿ tu nie dzia³a, mimo poprawki
+                        if (!isIterationTextVisible && !WaterDispenserFound)
                         {
-                            manager.SetDialogueText("Tak, to wiem.Tylko nie widzê rêki z wod¹");
+                            manager.SetDialogueText("Tak, to wiem. Tylko nie widzê rêki z wod¹");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Wypi³eœ wodê");
+                            audioMananger.PlaySFX(audioMananger.bubbles);
+                            manager.SetIteractionText("Wypi³aœ wodê");
                             isIterationTextVisible = true;
                             WaterDispenserFound = true;
                         }
@@ -154,12 +160,13 @@ public class Interactable : MonoBehaviour
                     {
                         if (!isIterationTextVisible && !microwaveFound)
                         {
-                            manager.SetDialogueText("Mmm, ale pachnie ta Hawajsk");
+                            manager.SetDialogueText("Mmm, ale pachnie ta Hawajska");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Odgrza³eœ pizze");
+                            manager.SetIteractionText("Odgrza³aœ pizze");
                             isIterationTextVisible = true;
                             microwaveFound = true;
+                            audioMananger.PlaySFX(audioMananger.microvawe);
                         }
                     }
                     if (collider.gameObject.tag == "CoffeeMachine")
@@ -169,30 +176,31 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Jakie dobre Latte");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Wypi³eœ kawê");
+                            manager.SetIteractionText("Wypi³aœ kawê");
                             isIterationTextVisible = true;
                             CoffeeMachineFound = true;
+                            audioMananger.PlaySFX(audioMananger.makingCaffee);
                         }
                     }
-                    if (collider.gameObject.tag == "BoomBox") //1
+                    if (collider.gameObject.tag == "BoomBox")
                     {
                         if (!isIterationTextVisible && !BoomBoxFound)
                         {
-                            manager.SetIteractionText("W³¹czy³eœ radio");
+                            manager.SetIteractionText("W³¹czy³aœ radio");
                             isIterationTextVisible = true;
                             if (audioMananger.boomBox != null)
                             {
-                                audioMananger.PlayMusic();
+                                audioMananger.PlayMusic(audioMananger.boomBox);
                             }
                             BoomBoxFound = true;
                         }
                     }
 
-                    if (collider.gameObject.tag == "EsterEnd") //4
+                    if (collider.gameObject.tag == "EsterEnd")
                     {
                         if (!playerTextVisible)
                         {
-                            manager.SetDialogueText("NIE POWINNO CIÊ TU BYÆ, JULIO!"); // Tu daæ tekst na kolizjê ze œcian¹
+                            manager.SetDialogueText("NIE POWINNO CIÊ TU BYÆ, JULIO!");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             endGame = true;
@@ -202,11 +210,16 @@ public class Interactable : MonoBehaviour
                     {
                         if (!playerTextVisible && !PianoFound)
                         {
-                            manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz i piêkny instrument");
+                            manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz ipiêkny instrument");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Zagra³eœ na pianinie");
+                            manager.SetIteractionText("Zagra³aœ na pianinie");
                             isIterationTextVisible = true;
+                            PianoFound = true;
+                            if (audioMananger.Piano != null)
+                            {
+                                audioMananger.PlayMusic(audioMananger.Piano);
+                            }
                             PianoFound = true;
                         }
                     }
@@ -218,7 +231,8 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("A, gdzie to zdjêcie?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("Zrobi³eœ zdjêcie");
+                            audioMananger.PlaySFX(audioMananger.takePhoto);
+                            manager.SetIteractionText("Zrobi³aœ zdjêcie");
                             isIterationTextVisible = true;
                             CameraFound = true;
                         }
@@ -253,12 +267,13 @@ public class Interactable : MonoBehaviour
                         {
                             manager.SetDialogueText("Umyjê, co mi szkodzi");
                             playerTextVisible = true;
+                            audioMananger.PlaySFX(audioMananger.dishes);
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Brudne naczynia");
                             isIterationTextVisible = true;
                             MugFound = true;
                         }
-                       
+
                     }
                     if (collider.gameObject.tag == "WeatFloor")
                     {
@@ -267,7 +282,7 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Co? Jak? Pod³oga jest sucha");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText(" 'Morak Pod³oga' ");
+                            manager.SetIteractionText(" 'Mokra Pod³oga' ");
                             isIterationTextVisible = true;
                             WeatFloorFound = true;
                         }
@@ -284,10 +299,7 @@ public class Interactable : MonoBehaviour
                             isIterationTextVisible = true;
                             NewsFound = true;
                         }
-
-                    }
-
-                    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    }         
                 }
             }
         }
@@ -309,7 +321,6 @@ public class Interactable : MonoBehaviour
                 if (endGame)
                 {
                     endGameScreen.showEndGameScreen();
-                    //SceneManager.LoadScene("EndGameScreen");
                 }
             }
             timeSinceDialogVisible = 0f;
