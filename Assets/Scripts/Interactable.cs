@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
-    private float maxVisibleTime = 3.5f;
+    private float maxVisibleTime = 4f;
     private float timeSinceInfoVisible = 0f;
     private bool isIterationTextVisible = false;
     public UIManager manager;
@@ -45,7 +45,7 @@ public class Interactable : MonoBehaviour
         timeSinceDialogVisible += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.E))
         {
-            float interactRange = 5f;
+            float interactRange =1.5f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
 
             foreach (Collider collider in colliderArray)
@@ -196,7 +196,7 @@ public class Interactable : MonoBehaviour
                         }
                     }
 
-                    if (collider.gameObject.tag == "EsterEnd")
+                    if (collider.gameObject.tag == "EsterEnd" && playerMovment.points >= 3) // co najmniej trzy znajdzki do zakonczenia gry
                     {
                         if (!playerTextVisible)
                         {
@@ -210,7 +210,7 @@ public class Interactable : MonoBehaviour
                     {
                         if (!playerTextVisible && !PianoFound)
                         {
-                            manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz ipiêkny instrument");
+                            manager.SetDialogueText("Ah, pianino. Jedyna normalna rzecz!");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Zagra³aœ na pianinie");
@@ -256,7 +256,7 @@ public class Interactable : MonoBehaviour
                             manager.SetDialogueText("Co?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
-                            manager.SetIteractionText("!au$jd@w#ed%hg^*$yjd8tsSTANLY");
+                            manager.SetIteractionText("!au$jd@w#ed%hg^*$yjd8ts");
                             isIterationTextVisible = true;
                             LaundryBasketFound = true;
                         }
@@ -292,7 +292,7 @@ public class Interactable : MonoBehaviour
                     {
                         if (!playerTextVisible && !NewsFound)
                         {
-                            manager.SetDialogueText("...");
+                            manager.SetDialogueText("Co? Czemu mój cieñ jest walcem?");
                             playerTextVisible = true;
                             timeSinceDialogVisible = 0f;
                             manager.SetIteractionText("Nie ma tu znajdziek");

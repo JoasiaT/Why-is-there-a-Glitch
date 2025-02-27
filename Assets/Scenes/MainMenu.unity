@@ -692,8 +692,8 @@ MonoBehaviour:
     p\xF3j\u015B\u0107 do sklep\xF3w\ni w inne miejsca\n(w jakie inne miejsca? Nie
     wiem nie jestem nimi). Julia dawno nie widzia\u0142a swoich kole\u017Canek, \nwi\u0119c
     chcia\u0142a nadrobi\u0107 stracony czas.\nUm\xF3wi\u0142a si\u0119 z nimi na
-    trzynast\u0105, by umili\u0107 sobie czas w\u0142\u0105czy\u0142\u0105 radio
-    stoj\u0105ce przed ni\u0105. "
+    trzynast\u0105, by umili\u0107 sobie czas w\u0142\u0105czy\u0142a radio stoj\u0105ce
+    przed ni\u0105. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -966,7 +966,7 @@ AudioSource:
   m_GameObject: {fileID: 350799137}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1512049644101685288, guid: 6db2ac457fb1c9a40b67bd35d0461817, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3389,7 +3389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821646913
@@ -3492,7 +3492,7 @@ AudioSource:
   m_GameObject: {fileID: 1976382439}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2498392233333922053, guid: 6db2ac457fb1c9a40b67bd35d0461817, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

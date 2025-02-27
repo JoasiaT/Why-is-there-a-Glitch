@@ -7,13 +7,13 @@ public class AudioManager : MonoBehaviour
     //public void BackgroundMusic;
 
     [Header("................Audio Sorce ...................")]
-    [SerializeField] public AudioMixer audioMixer;
-    [SerializeField] public AudioSource audioSource;
-    [SerializeField] public AudioSource SFXSource;
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource SFXSource;
 
     [Header("................Audio Sliders .................")]
-    [SerializeField] Slider musicSlider;
-    [SerializeField] Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
 
     [Header("................Audio Clip ....................")]
     public AudioClip mainMenuMusic;
@@ -96,6 +96,7 @@ public class AudioManager : MonoBehaviour
 
     public void LoadMusicVolume()
     {
+        musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         SetMusicVolume();
     }
 
@@ -108,6 +109,7 @@ public class AudioManager : MonoBehaviour
 
     public void LoadSFXVolume()
     {
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         SetMusicVolume();
     }
 
